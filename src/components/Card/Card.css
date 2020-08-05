@@ -15,6 +15,7 @@
 .flex{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .card .infos img{
@@ -60,9 +61,50 @@
 .card .infos .content h2{
     margin: 0.5em 0;
     font-size: 1em;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+.card .infos .content h2:hover{
+    color: hsl(180, 29%, 50%);
+    transition: 0.2s all;
 }
 
 .card .infos .content .inferior span {
     font-size: 0.8em;
     color: hsl(180, 8%, 52%);
+}
+
+.card .tags{
+    vertical-align: middle;
+    margin: 0;
+}
+.card .tags li {
+    display: inline-block;
+    padding: 0.4em;
+    background: hsl(180, 31%, 95%);
+    margin-left: 1em;
+    vertical-align: middle;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.card .tags li:hover{
+    background: hsl(180, 29%, 50%);
+    transition: 0.2s;
+}
+
+.card .tags li:hover a{
+    color: white;
+    transition: 0.2s;
+}
+
+.card .tags li a {
+    font-size: 0.8em;
+    text-decoration: none;
+    font-weight: 700;
+    color: hsl(180, 29%, 50%);
+    vertical-align: bottom;
+    transition: 0.2s;
 }

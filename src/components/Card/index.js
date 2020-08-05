@@ -1,7 +1,7 @@
 import React from 'react';
 import './Card.css';
 
-const Card = ({data}) => {
+const Card = ({data, onFilter}) => {
     
     return (
         <div className="card flex">
@@ -21,7 +21,22 @@ const Card = ({data}) => {
             </div>
             
             <ul className="tags">
-
+                <li onClick={(e) => onFilter(e, data.role)}><a href="#">{data.role}</a></li>
+                <li onClick={(e) => onFilter(e, data.level)}><a href="#">{data.level}</a></li>
+                {
+                    data.languages.map(lang => {
+                        return (
+                            <li onClick={(e) => onFilter(e, lang)}><a href="#">{lang}</a></li>
+                        )
+                    })
+                }
+                {
+                    data.tools.map(tool => {
+                        return (
+                            <li onClick={(e) => onFilter(e, tool)}><a href="#">{tool}</a></li>
+                        )
+                    })
+                }
             </ul>
         </div>
     )

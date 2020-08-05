@@ -1,0 +1,43 @@
+.filter{
+    background: white;
+    position: relative;
+    padding: 0.1em;
+    box-shadow: 2px 2px 15px rgb(181, 202, 194);
+}
+
+.filter .tags2 li {
+    display: inline-block;
+    padding: 0.4em;
+    background: hsl(180, 31%, 95%);
+    margin-left: 1em;
+    vertical-align: middle;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 0.8em;
+    text-decoration: none;
+    font-weight: 700;
+    color: hsl(180, 29%, 50%);
+    vertical-align: middle;
+    transition: 0.2s;
+}
+
+.filter .tags2  a {
+    color: white;
+    background: hsl(180, 14%, 20%);
+    padding: 0.4em;
+    font-size: 0.8em;
+    text-decoration: none;
+    vertical-align: middle;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.tagsDiv{
+    display: inline-block;
+}
+#filterContainer{
+    position: relative;
+    bottom: 30px;
+}
