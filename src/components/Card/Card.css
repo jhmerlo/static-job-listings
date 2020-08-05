@@ -16,6 +16,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .card .infos img{
@@ -107,4 +108,43 @@
     color: hsl(180, 29%, 50%);
     vertical-align: bottom;
     transition: 0.2s;
+}
+
+.mobileHr{
+    display: none;
+}
+
+@media only screen and (max-width: 870px){
+    .card{
+        margin-top: 3em;
+        padding-bottom: 0;
+    }
+    .card .infos img{
+        display: block;
+        position: relative;
+        bottom: 50px;
+        height: 60px;
+        width: 60px;
+    }
+    .card .infos .content{
+        position: relative;
+        bottom: 40px;
+    }
+
+    .tags{
+        padding: 0;
+        position: relative;
+        bottom: 40px;
+    }
+
+    .tags li{
+        margin-top: 1em;
+    }
+
+    .mobileHr{
+        display: block;
+        width: 100%;
+        position: relative;
+        bottom: 40px;
+    }
 }

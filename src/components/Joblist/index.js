@@ -56,6 +56,13 @@ export default class Joblist extends Component {
         })
     }
 
+    clear(e){
+        e.preventDefault();
+        this.setState({filtros: []}, () => {
+            this.filtrar();
+        });
+    }
+
     filtrar() {
         const data2 = this.state.data;
         data2.forEach(data => {
@@ -89,8 +96,8 @@ export default class Joblist extends Component {
     render() {
         return (
             <main>
-                <Filter filtros={this.state.filtros} onRemove={(e, filtro) => this.removeFiltros(e, filtro)} />
-                <div className="container">
+                <Filter filtros={this.state.filtros} onRemove={(e, filtro) => this.removeFiltros(e, filtro)} onClear = {(e)=>this.clear(e)} />
+                <div className="container" id="containerCards">
                     {
                         this.state.data.map(job => {
                             if (job.show) {

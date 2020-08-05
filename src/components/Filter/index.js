@@ -6,8 +6,6 @@ export default class Filter extends Component {
         super(props)
     }
 
-
-
     render() {
         if (this.props.filtros.length > 0) {
             return (
@@ -18,8 +16,8 @@ export default class Filter extends Component {
                     transitionEnter={false}
                     transitionLeave={true}
                     transitionLeaveTimeout={300}>
-                    <div class="container" id="filterContainer">
-                        <div className="filter">
+                    <div className="container" id="filterContainer">
+                        <div className="filter justify-between">
                             <ul className="tags2">
                                 {
                                     this.props.filtros.map(filtro => {
@@ -37,6 +35,7 @@ export default class Filter extends Component {
                                     })
                                 }
                             </ul>
+                            <a href="#" className="clearButton" onClick={(e) => this.props.onClear(e)}>Clear</a>
                         </div>
                     </div>
                 </CSSTransitionGroup>
